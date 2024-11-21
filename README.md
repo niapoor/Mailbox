@@ -6,3 +6,5 @@
  Mailbox shows the potential of gamified education in addressing the growing issue of online scams targeting older adults. With continued development and community contributions, Mailbox can further evolve into a valuable resource for helping older adults protect themselves online.
 
  ### This game is open-source and is accepting contributions from the community through pull requests
+
+Contact scameducation@mail.rit.edu with any questions or concerns.
