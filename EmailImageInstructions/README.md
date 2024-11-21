@@ -7,6 +7,8 @@ To submit a new email to the game, each email must be accompanied by **four imag
 3. **Annotated light mode**
 4. **Annotated dark mode**
 
+Submissions must also include text explnations for why it is considered **legitimate** or **a scam**.
+
 ## Image Specifications
 
 ### Non-Annotated Emails
