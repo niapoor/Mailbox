@@ -1,0 +1,1472 @@
+[gd_scene load_steps=23 format=3 uid="uid://2tvxnr786jpk"]
+
+[ext_resource type="Script" path="res://landing_page.gd" id="1_0agsm"]
+[ext_resource type="Texture2D" uid="uid://c88ag4f37hxl1" path="res://Assets/FullLogoLightTheme.png" id="2_7yown"]
+[ext_resource type="Theme" uid="uid://5ypwud31ojke" path="res://Assets/ThemesLight/upper_panel.tres" id="2_tafk6"]
+[ext_resource type="Theme" uid="uid://bhjlxrg4tim8" path="res://Assets/ThemesLight/left_button_email_classification_panels.tres" id="3_amjy7"]
+[ext_resource type="Texture2D" uid="uid://dd5mdsmirm4rs" path="res://Assets/BlackIcons/InboxIcon.png" id="3_ewfcl"]
+[ext_resource type="Texture2D" uid="uid://dg1kma57nuls4" path="res://Assets/BlackIcons/TutorialIcon.png" id="4_iikrt"]
+[ext_resource type="Texture2D" uid="uid://cqdm6wqmmo080" path="res://Assets/BlackIcons/SettingsIcon.png" id="5_u5t7q"]
+[ext_resource type="Texture2D" uid="uid://kgj1lpge606u" path="res://Assets/BlackIcons/ResourcesIcon.png" id="6_7n0qm"]
+[ext_resource type="Texture2D" uid="uid://cn03a0pigeu7x" path="res://Assets/BlackIcons/ArchiveIcon.png" id="7_0t5wm"]
+[ext_resource type="Texture2D" uid="uid://c0w2fxlkpb6c2" path="res://Assets/BlackIcons/ReportIcon.png" id="8_uixsw"]
+[ext_resource type="Texture2D" uid="uid://dc81is6c3t7bw" path="res://Assets/BlackIcons/SubmitIcon.png" id="10_gl7c2"]
+[ext_resource type="Theme" uid="uid://b83m017lc75mg" path="res://Assets/ThemesLight/InboxSpecific/email_buttons_panel.tres" id="11_b2fjl"]
+[ext_resource type="Theme" uid="uid://bocma72y3x8lv" path="res://Assets/ThemesLight/InboxSpecific/top_only_email_buttons_panel.tres" id="13_lnvwb"]
+[ext_resource type="Script" path="res://button_text_change.gd" id="14_i8cgm"]
+[ext_resource type="Theme" uid="uid://b46bugmb6r6yv" path="res://Assets/ThemesLight/InboxSpecific/email_panel.tres" id="15_hm0hn"]
+[ext_resource type="Theme" uid="uid://bfasromlka52b" path="res://Assets/ThemesLight/TutorialSpecific/tutorial_panel.tres" id="17_inu45"]
+[ext_resource type="VideoStream" path="res://Assets/2024-10-07 09-26-27.ogv" id="18_7atny"]
+[ext_resource type="Texture2D" uid="uid://b1ujmcbt04lu" path="res://Assets/BlackIcons/PauseIcon.png" id="19_r33jv"]
+[ext_resource type="Texture2D" uid="uid://dcr0v06lxlffv" path="res://Assets/BlackIcons/UnpauseIcon.png" id="20_dekex"]
+[ext_resource type="Script" path="res://email_main.gd" id="21_2ek6v"]
+[ext_resource type="Texture2D" uid="uid://dbhrj1yc1gghi" path="res://Assets/BlackIcons/BrushIcon.png" id="22_61v67"]
+
+[sub_resource type="Theme" id="Theme_kn43f"]
+
+[node name="MainGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0agsm")
+
+[node name="UpperPanel" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.128
+offset_bottom = 0.0559998
+grow_horizontal = 2
+theme = ExtResource("2_tafk6")
+
+[node name="Panel" type="Panel" parent="UpperPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MailboxButtonContainer" type="MarginContainer" parent="UpperPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.009
+anchor_top = 0.084
+anchor_right = 0.23
+anchor_bottom = 0.916
+offset_left = -0.368001
+offset_top = 0.0279994
+offset_right = 70.04
+offset_bottom = -0.0279999
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpperPanel/MailboxButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UpperPanel/MailboxButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+icon = ExtResource("2_7yown")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="LeftButtonPanel" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.128
+anchor_right = 0.18
+anchor_bottom = 1.0
+offset_top = 0.0559998
+offset_right = -0.360016
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InboxButtonContainer" type="MarginContainer" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.018
+anchor_right = 0.952
+anchor_bottom = 0.117
+offset_left = 0.0640001
+offset_top = -0.170001
+offset_right = -0.0640106
+offset_bottom = -0.105003
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftButtonPanel/InboxButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LeftButtonPanel/InboxButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Inbox"
+icon = ExtResource("3_ewfcl")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="TutorialButtonContainer" type="MarginContainer" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.124
+anchor_right = 0.952
+anchor_bottom = 0.223
+offset_left = 0.0640001
+offset_top = -0.0600052
+offset_right = -0.0640106
+offset_bottom = 0.00499725
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftButtonPanel/TutorialButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LeftButtonPanel/TutorialButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Tutorial"
+icon = ExtResource("4_iikrt")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="OptionsButtonContainer" type="MarginContainer" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.23
+anchor_right = 0.952
+anchor_bottom = 0.329
+offset_left = 0.0640001
+offset_top = 0.0500031
+offset_right = -0.0640106
+offset_bottom = 0.11499
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftButtonPanel/OptionsButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LeftButtonPanel/OptionsButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+icon = ExtResource("5_u5t7q")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="ResourcesButtonContainer" type="MarginContainer" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.336
+anchor_right = 0.952
+anchor_bottom = 0.435
+offset_left = 0.0640001
+offset_top = 0.159988
+offset_right = -0.0640106
+offset_bottom = 0.224976
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftButtonPanel/ResourcesButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LeftButtonPanel/ResourcesButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Resources"
+icon = ExtResource("6_7n0qm")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="ArchivedButtonContainer" type="MarginContainer" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.777
+anchor_right = 0.952
+anchor_bottom = 0.876
+offset_left = 0.0640001
+offset_top = -0.00500488
+offset_right = -0.0640106
+offset_bottom = 0.0599365
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftButtonPanel/ArchivedButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LeftButtonPanel/ArchivedButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Archived
+"
+icon = ExtResource("7_0t5wm")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="ReportedButtonContainer" type="MarginContainer" parent="LeftButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.883
+anchor_right = 0.952
+anchor_bottom = 0.982
+offset_left = 0.0640001
+offset_top = 0.10498
+offset_right = -0.0640106
+offset_bottom = 0.169983
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftButtonPanel/ReportedButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LeftButtonPanel/ReportedButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Reported"
+icon = ExtResource("8_uixsw")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="InboxNode" type="Node" parent="."]
+
+[node name="EmailPanel" type="NinePatchRect" parent="InboxNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+grow_horizontal = 2
+theme = ExtResource("15_hm0hn")
+
+[node name="Panel" type="Panel" parent="InboxNode/EmailPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmailButtonsPanel" type="NinePatchRect" parent="InboxNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 0.397
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+offset_right = -0.344025
+grow_horizontal = 2
+theme = ExtResource("11_b2fjl")
+
+[node name="Panel" type="Panel" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Email1Container" type="MarginContainer" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("13_lnvwb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailButtonsPanel/Email1Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailButtonsPanel/Email1Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Claim Your Prize: Survey and Win a Yeti Crossroads Backpack"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email2Container" type="MarginContainer" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.4
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailButtonsPanel/Email2Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailButtonsPanel/Email2Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Renew Today and Get a FREE Year of Costco Membership!"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email3Container" type="MarginContainer" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailButtonsPanel/Email3Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailButtonsPanel/Email3Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "CONFIRMATION_729"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email4Container" type="MarginContainer" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailButtonsPanel/Email4Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailButtonsPanel/Email4Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Account Sirius XM Will Be Removed Today❗️"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email5Container" type="MarginContainer" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailButtonsPanel/Email5Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailButtonsPanel/Email5Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Paramount+ Membership has Expired"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="InboxNode/EmailButtonsPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EmailClassificationPanel" type="NinePatchRect" parent="InboxNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 0.228
+offset_left = -0.344025
+offset_top = 0.0559998
+offset_bottom = 11.256
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="InboxNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArchiveButtonContainer" type="MarginContainer" parent="InboxNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.132
+anchor_right = 0.23
+anchor_bottom = 0.868
+offset_left = 0.27
+offset_top = -0.0319996
+offset_right = 0.149994
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailClassificationPanel/ArchiveButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Archive"
+icon = ExtResource("7_0t5wm")
+expand_icon = true
+language = "en"
+
+[node name="ReportButtonContainer" type="MarginContainer" parent="InboxNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.237
+anchor_top = 0.132
+anchor_right = 0.453
+anchor_bottom = 0.868
+offset_left = 0.285004
+offset_top = -0.0319996
+offset_right = 0.165009
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailClassificationPanel/ReportButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Report"
+icon = ExtResource("8_uixsw")
+expand_icon = true
+language = "en"
+
+[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="InboxNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.626
+anchor_top = 0.132
+anchor_right = 0.986
+anchor_bottom = 0.868
+offset_left = -0.0699768
+offset_top = -0.0319996
+offset_right = -0.27002
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InboxNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="InboxNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Submit Answers"
+icon = ExtResource("10_gl7c2")
+expand_icon = true
+language = "en"
+
+[node name="InboxEmptyText" type="RichTextLabel" parent="InboxNode"]
+visible = false
+offset_left = 226.0
+offset_top = 141.0
+offset_right = 1129.0
+offset_bottom = 614.0
+theme = ExtResource("11_b2fjl")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 45
+bbcode_enabled = true
+text = "[center]
+All emails have been classified.
+
+Select the [b]Submit Answers[/b] button to see your accuracy and receive feedback."
+
+[node name="TutorialNode" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="TutorialNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("17_inu45")
+
+[node name="TutorialVideoPlayer" type="VideoStreamPlayer" parent="TutorialNode/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_right = 0.966
+anchor_bottom = 0.876
+offset_left = -0.0750008
+offset_right = 0.130005
+offset_bottom = 0.059967
+stream = ExtResource("18_7atny")
+autoplay = true
+expand = true
+loop = true
+
+[node name="PauseButtonContainer" type="MarginContainer" parent="TutorialNode/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.892
+anchor_right = 0.182
+anchor_bottom = 0.982
+offset_left = -0.0750008
+offset_top = 0.019989
+offset_right = 0.00999451
+offset_bottom = 0.169983
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_amjy7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TutorialNode/Panel/PauseButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TutorialNode/Panel/PauseButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Pause"
+icon = ExtResource("19_r33jv")
+expand_icon = true
+language = "en"
+
+[node name="UnpauseButtonContainer" type="MarginContainer" parent="TutorialNode/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.892
+anchor_right = 0.214
+anchor_bottom = 0.982
+offset_left = -0.0750008
+offset_top = 0.019989
+offset_right = -0.230011
+offset_bottom = 0.169983
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_amjy7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TutorialNode/Panel/UnpauseButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TutorialNode/Panel/UnpauseButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Unpause"
+icon = ExtResource("20_dekex")
+expand_icon = true
+language = "en"
+
+[node name="TutorialText" type="RichTextLabel" parent="TutorialNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.27
+anchor_right = 0.989
+anchor_bottom = 0.934
+offset_left = -0.488007
+offset_top = 0.0399933
+offset_right = -0.328003
+offset_bottom = -0.231995
+theme = ExtResource("11_b2fjl")
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "- Press the [b]Inbox[/b] button to review emails.
+
+- Classify each email as either [b]Legitimate[/b] (archive) or [b]Scam[/b] (report).
+
+- Once you've reviewed all emails, select the [b]Submit Answers[/b] button to see your accuracy.
+
+- Reset the game by pressing the [b]Reset Emails[/b] button.
+[center]
+For a detailed walkthrough, click on the [b]Video Tutorial[/b] button on the bottom right of this page.
+"
+
+[node name="TutorialTextHeader" type="RichTextLabel" parent="TutorialNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.367
+anchor_top = 0.039
+anchor_right = 0.788
+anchor_bottom = 0.287
+offset_left = 0.215973
+offset_top = -0.272001
+offset_right = 0.223938
+offset_bottom = 0.0240021
+theme = ExtResource("11_b2fjl")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]
+Mailbox Tutorial"
+
+[node name="SettingsNode" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="SettingsNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("17_inu45")
+
+[node name="OptionsButtonContainer" type="MarginContainer" parent="SettingsNode/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011
+anchor_top = 0.018
+anchor_right = 0.208
+anchor_bottom = 0.115
+offset_left = -0.395
+offset_top = -0.170001
+offset_right = 53.44
+offset_bottom = 0.0250015
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_amjy7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsNode/Panel/OptionsButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="SettingsNode/Panel/OptionsButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Change Theme"
+icon = ExtResource("22_61v67")
+alignment = 0
+expand_icon = true
+language = "en"
+
+[node name="Scripts" type="Node" parent="."]
+
+[node name="ChoosingEmails" type="Sprite2D" parent="Scripts"]
+script = ExtResource("21_2ek6v")
+
+[node name="TmpPopUp" type="Node" parent="."]
+
+[node name="Window" type="Window" parent="TmpPopUp"]
+title = "Educational Research Survey Invitation"
+initial_position = 1
+size = Vector2i(500, 300)
+visible = false
+theme = SubResource("Theme_kn43f")
+theme_override_constants/title_outline_size = 5
+theme_override_font_sizes/title_font_size = 22
+
+[node name="Label" type="Label" parent="TmpPopUp/Window"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -343.5
+offset_top = -172.5
+offset_right = 343.5
+offset_bottom = 172.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Thank you for playing Mailbox!
+
+This game is part of a graduate capstone project
+ and includes an optional survey. Your participation
+ will help advance scam education, and you'll have
+ a chance to win one of two $25 Amazon gift cards.
+
+To take the survey, visit scameducation.org and scroll to 
+the bottom. If you have any questions or concerns, feel 
+free to email us at scameducation@mail.rit.edu."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArchivedNode" type="Node" parent="."]
+
+[node name="EmailPanel" type="NinePatchRect" parent="ArchivedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+grow_horizontal = 2
+theme = ExtResource("15_hm0hn")
+
+[node name="Panel" type="Panel" parent="ArchivedNode/EmailPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmailButtonsPanel" type="NinePatchRect" parent="ArchivedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 0.397
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+offset_right = -0.344025
+grow_horizontal = 2
+theme = ExtResource("11_b2fjl")
+
+[node name="Panel" type="Panel" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Email1Container" type="MarginContainer" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("13_lnvwb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailButtonsPanel/Email1Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailButtonsPanel/Email1Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Claim Your Prize: Survey and Win a Yeti Crossroads Backpack"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email2Container" type="MarginContainer" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.4
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailButtonsPanel/Email2Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailButtonsPanel/Email2Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Renew Today and Get a FREE Year of Costco Membership!"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email3Container" type="MarginContainer" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailButtonsPanel/Email3Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailButtonsPanel/Email3Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "CONFIRMATION_729"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email4Container" type="MarginContainer" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailButtonsPanel/Email4Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailButtonsPanel/Email4Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Account Sirius XM Will Be Removed Today❗️"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email5Container" type="MarginContainer" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailButtonsPanel/Email5Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailButtonsPanel/Email5Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Paramount+ Membership has Expired"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ArchivedNode/EmailButtonsPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EmailClassificationPanel" type="NinePatchRect" parent="ArchivedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 0.228
+offset_left = -0.344025
+offset_top = 0.0559998
+offset_bottom = 11.256
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="ArchivedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReportButtonContainer" type="MarginContainer" parent="ArchivedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.132
+anchor_right = 0.23
+anchor_bottom = 0.868
+offset_left = 0.27
+offset_top = -0.0319996
+offset_right = 0.149994
+offset_bottom = 0.0319901
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailClassificationPanel/ReportButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Report"
+icon = ExtResource("8_uixsw")
+expand_icon = true
+language = "en"
+
+[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="ArchivedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.626
+anchor_top = 0.132
+anchor_right = 0.986
+anchor_bottom = 0.868
+offset_left = -0.0699768
+offset_top = -0.0319996
+offset_right = -0.27002
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Submit Answers"
+icon = ExtResource("10_gl7c2")
+expand_icon = true
+language = "en"
+
+[node name="ArchivedEmptyText" type="RichTextLabel" parent="ArchivedNode"]
+visible = false
+offset_left = 228.0
+offset_top = 210.0
+offset_right = 1131.0
+offset_bottom = 506.0
+theme = ExtResource("11_b2fjl")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 45
+bbcode_enabled = true
+text = "[center]
+When you [b]archive[/b] emails, they will appear here."
+
+[node name="ReportedNode" type="Node" parent="."]
+
+[node name="EmailPanel" type="NinePatchRect" parent="ReportedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+grow_horizontal = 2
+theme = ExtResource("15_hm0hn")
+
+[node name="Panel" type="Panel" parent="ReportedNode/EmailPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmailButtonsPanel" type="NinePatchRect" parent="ReportedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 0.397
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+offset_right = -0.344025
+grow_horizontal = 2
+theme = ExtResource("11_b2fjl")
+
+[node name="Panel" type="Panel" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Email1Container" type="MarginContainer" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("13_lnvwb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailButtonsPanel/Email1Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailButtonsPanel/Email1Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Claim Your Prize: Survey and Win a Yeti Crossroads Backpack"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email2Container" type="MarginContainer" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.4
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailButtonsPanel/Email2Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailButtonsPanel/Email2Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Renew Today and Get a FREE Year of Costco Membership!"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email3Container" type="MarginContainer" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailButtonsPanel/Email3Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailButtonsPanel/Email3Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "CONFIRMATION_729"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email4Container" type="MarginContainer" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailButtonsPanel/Email4Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailButtonsPanel/Email4Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Account Sirius XM Will Be Removed Today❗️"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email5Container" type="MarginContainer" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailButtonsPanel/Email5Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailButtonsPanel/Email5Container/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Paramount+ Membership has Expired"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ReportedNode/EmailButtonsPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EmailClassificationPanel" type="NinePatchRect" parent="ReportedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 0.228
+offset_left = -0.344025
+offset_top = 0.0559998
+offset_bottom = 11.256
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="ReportedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArchiveButtonContainer" type="MarginContainer" parent="ReportedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.132
+anchor_right = 0.23
+anchor_bottom = 0.868
+offset_left = 0.27
+offset_top = -0.0319996
+offset_right = 0.149994
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Archive"
+icon = ExtResource("7_0t5wm")
+expand_icon = true
+language = "en"
+
+[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="ReportedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.626
+anchor_top = 0.132
+anchor_right = 0.986
+anchor_bottom = 0.868
+offset_left = -0.0699768
+offset_top = -0.0319996
+offset_right = -0.27002
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Submit Answers"
+icon = ExtResource("10_gl7c2")
+expand_icon = true
+language = "en"
+
+[node name="ReportedEmptyText" type="RichTextLabel" parent="ReportedNode"]
+visible = false
+offset_left = 228.0
+offset_top = 210.0
+offset_right = 1131.0
+offset_bottom = 506.0
+theme = ExtResource("11_b2fjl")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 45
+bbcode_enabled = true
+text = "[center]
+When you [b]report[/b] emails, they will appear here."
+
+[node name="AnswersNode" type="Node" parent="."]
+
+[node name="EmailPanel" type="NinePatchRect" parent="AnswersNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+grow_horizontal = 2
+theme = ExtResource("15_hm0hn")
+
+[node name="Panel" type="Panel" parent="AnswersNode/EmailPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmailButtonsPanel" type="NinePatchRect" parent="AnswersNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.128
+anchor_right = 0.397
+anchor_bottom = 1.0
+offset_left = -0.360016
+offset_top = 0.0559998
+offset_right = -0.344025
+grow_horizontal = 2
+theme = ExtResource("11_b2fjl")
+
+[node name="Panel" type="Panel" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Email1Container" type="MarginContainer" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.2
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("13_lnvwb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnswersNode/EmailButtonsPanel/Email1Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AnswersNode/EmailButtonsPanel/Email1Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Claim Your Prize: Survey and Win a Yeti Crossroads Backpack"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email2Container" type="MarginContainer" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.4
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnswersNode/EmailButtonsPanel/Email2Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AnswersNode/EmailButtonsPanel/Email2Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Renew Today and Get a FREE Year of Costco Membership!"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email3Container" type="MarginContainer" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_right = 1.0
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnswersNode/EmailButtonsPanel/Email3Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AnswersNode/EmailButtonsPanel/Email3Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "CONFIRMATION_729"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email4Container" type="MarginContainer" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnswersNode/EmailButtonsPanel/Email4Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AnswersNode/EmailButtonsPanel/Email4Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Account Sirius XM Will Be Removed Today❗️"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="Email5Container" type="MarginContainer" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnswersNode/EmailButtonsPanel/Email5Container"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AnswersNode/EmailButtonsPanel/Email5Container/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 19
+text = "Your Paramount+ Membership has Expired"
+autowrap_mode = 3
+expand_icon = true
+language = "en"
+script = ExtResource("14_i8cgm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="AnswersNode/EmailButtonsPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EmailClassificationPanel" type="NinePatchRect" parent="AnswersNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 0.228
+offset_left = -0.344025
+offset_top = 0.0559998
+offset_bottom = 11.256
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="AnswersNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="AnswersNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.626
+anchor_top = 0.132
+anchor_right = 0.986
+anchor_bottom = 0.868
+offset_left = -0.0699768
+offset_top = -0.0319996
+offset_right = -0.27002
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnswersNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AnswersNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Submit Answers"
+icon = ExtResource("10_gl7c2")
+expand_icon = true
+language = "en"
+
+[connection signal="pressed" from="LeftButtonPanel/InboxButtonContainer/VBoxContainer/Button" to="." method="_on_inbox_pressed"]
+[connection signal="pressed" from="LeftButtonPanel/TutorialButtonContainer/VBoxContainer/Button" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="LeftButtonPanel/OptionsButtonContainer/VBoxContainer/Button" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="LeftButtonPanel/ArchivedButtonContainer/VBoxContainer/Button" to="." method="_on_archived_button_pressed"]
+[connection signal="pressed" from="LeftButtonPanel/ReportedButtonContainer/VBoxContainer/Button" to="." method="_on_reported_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_email_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email2Container/VBoxContainer/Button" to="." method="_on_second_email_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email3Container/VBoxContainer/Button" to="." method="_on_third_email_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email4Container/VBoxContainer/Button" to="." method="_on_fourth_email_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email5Container/VBoxContainer/Button" to="." method="_on_fifth_email_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
+[connection signal="pressed" from="TutorialNode/Panel/PauseButtonContainer/VBoxContainer/Button" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="TutorialNode/Panel/UnpauseButtonContainer/VBoxContainer/Button" to="." method="_on_unpause_pressed"]
+[connection signal="pressed" from="SettingsNode/Panel/OptionsButtonContainer/VBoxContainer/Button" to="." method="_on_theme_change_button_pressed"]
+[connection signal="close_requested" from="TmpPopUp/Window" to="." method="_on_window_close_requested"]
+[connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_archived_button_pressed"]
+[connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email2Container/VBoxContainer/Button" to="." method="_on_second_archived_button_pressed"]
+[connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email3Container/VBoxContainer/Button" to="." method="_on_third_archived_button_pressed"]
+[connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email4Container/VBoxContainer/Button" to="." method="_on_fourth_archived_button_pressed"]
+[connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email5Container/VBoxContainer/Button" to="." method="_on_fifth_archived_button_pressed"]
+[connection signal="pressed" from="ArchivedNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed_from_archived"]
+[connection signal="pressed" from="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_reported_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email2Container/VBoxContainer/Button" to="." method="_on_second_reported_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email3Container/VBoxContainer/Button" to="." method="_on_third_reported_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email4Container/VBoxContainer/Button" to="." method="_on_fourth_reported_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email5Container/VBoxContainer/Button" to="." method="_on_fifth_reported_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_button_pressed_from_reported"]
+[connection signal="pressed" from="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
+[connection signal="pressed" from="AnswersNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
