@@ -320,7 +320,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="EmailClassificationPanel" type="NinePatchRect" parent="InboxNode"]
-visible = false
 anchors_preset = -1
 anchor_left = 0.397
 anchor_top = 0.128
@@ -1388,6 +1387,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="EmailClassificationPanel" type="NinePatchRect" parent="ReportedNode"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.397
 anchor_top = 0.128
@@ -2144,8 +2144,8 @@ text = "[center]Showing non-annotated legitimate and scam emails."
 [connection signal="pressed" from="LeftButtonPanel/ReportedButtonContainer/VBoxContainer/Button" to="." method="_on_reported_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_button_pressed"]
-[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/HintButtonContainer/VBoxContainer/Button" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_email_button_pressed"]

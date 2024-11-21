@@ -83,6 +83,7 @@ func _ready():
 	tutorial_video_player.set_paused(true)
 	_generate_buttons_and_emails()
 	_on_tutorial_pressed()
+	_on_clean_display_button_pressed()
 
 # ========== LEFT PANEL BUTTON FUNCTIONS ============
 
@@ -958,6 +959,9 @@ func _on_archive_button_pressed() -> void:
 	if not email_button_1.is_visible():
 		$InboxNode/EmailButtonsPanel.hide()
 		$InboxNode/InboxEmptyText.show()
+		$InboxNode/EmailClassificationPanel/ArchiveButtonContainer.hide()
+		$InboxNode/EmailClassificationPanel/ReportButtonContainer.hide()
+		$InboxNode/EmailClassificationPanel/HintButtonContainer.hide()
 
 # When the report button is pressed.
 # ONLY FOR THE INBOX SCREEN
@@ -1060,6 +1064,9 @@ func _on_report_button_pressed() -> void:
 	if not email_button_1.is_visible():
 		$InboxNode/EmailButtonsPanel.hide()
 		$InboxNode/InboxEmptyText.show()
+		$InboxNode/EmailClassificationPanel/ArchiveButtonContainer.hide()
+		$InboxNode/EmailClassificationPanel/ReportButtonContainer.hide()
+		$InboxNode/EmailClassificationPanel/HintButtonContainer.hide()
 
 # When the report button is pressed.
 # ONLY FOR THE ARCHIVED SCREEN
