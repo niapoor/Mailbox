@@ -61,6 +61,8 @@ This email is {legitimate OR a scam}. Some ways you can tell include:
 * [bullet point 1]
 * [bullet point 2]
 * [bullet point 3] (optional)
+* [bullet point 4] (optional)
+* [bullet point 5] (optional)
 ```
 
 ## Email Restrictions
