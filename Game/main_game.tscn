@@ -998,6 +998,81 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="EmailClassificationPanel" type="NinePatchRect" parent="ArchivedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 0.228
+offset_left = -0.344025
+offset_top = 0.0559998
+offset_bottom = 11.256
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="ArchivedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.36
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.200012
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReportButtonContainer" type="MarginContainer" parent="ArchivedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.132
+anchor_right = 0.194
+anchor_bottom = 0.868
+offset_left = 0.27
+offset_top = -0.0319996
+offset_right = 0.169998
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailClassificationPanel/ReportButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Scam"
+icon = ExtResource("8_uixsw")
+expand_icon = true
+language = "en"
+
+[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="ArchivedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.626
+anchor_top = 0.132
+anchor_right = 0.986
+anchor_bottom = 0.868
+offset_left = -0.0699768
+offset_top = -0.0319996
+offset_right = -0.27002
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Submit Answers"
+icon = ExtResource("10_gl7c2")
+expand_icon = true
+language = "en"
+
 [node name="EmailButtonsPanel" type="NinePatchRect" parent="ArchivedNode"]
 visible = false
 anchors_preset = -1
@@ -1137,81 +1212,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="EmailClassificationPanel" type="NinePatchRect" parent="ArchivedNode"]
-visible = false
-anchors_preset = -1
-anchor_left = 0.397
-anchor_top = 0.128
-anchor_right = 1.0
-anchor_bottom = 0.228
-offset_left = -0.344025
-offset_top = 0.0559998
-offset_bottom = 11.256
-grow_horizontal = 2
-theme = ExtResource("3_amjy7")
-
-[node name="Panel" type="Panel" parent="ArchivedNode/EmailClassificationPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.36
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.200012
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ReportButtonContainer" type="MarginContainer" parent="ArchivedNode/EmailClassificationPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.014
-anchor_top = 0.132
-anchor_right = 0.194
-anchor_bottom = 0.868
-offset_left = 0.27
-offset_top = -0.0319996
-offset_right = 0.169998
-offset_bottom = 0.0319977
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailClassificationPanel/ReportButtonContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ArchivedNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "Scam"
-icon = ExtResource("8_uixsw")
-expand_icon = true
-language = "en"
-
-[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="ArchivedNode/EmailClassificationPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.626
-anchor_top = 0.132
-anchor_right = 0.986
-anchor_bottom = 0.868
-offset_left = -0.0699768
-offset_top = -0.0319996
-offset_right = -0.27002
-offset_bottom = 0.0319977
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "Submit Answers"
-icon = ExtResource("10_gl7c2")
-expand_icon = true
-language = "en"
-
 [node name="ArchivedEmptyText" type="RichTextLabel" parent="ArchivedNode"]
 visible = false
 offset_left = 228.0
@@ -1246,6 +1246,81 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="EmailClassificationPanel" type="NinePatchRect" parent="ReportedNode"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.128
+anchor_right = 1.0
+anchor_bottom = 0.228
+offset_left = -0.344025
+offset_top = 0.0559998
+offset_bottom = 11.256
+grow_horizontal = 2
+theme = ExtResource("3_amjy7")
+
+[node name="Panel" type="Panel" parent="ReportedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.36
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.200012
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArchiveButtonContainer" type="MarginContainer" parent="ReportedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.132
+anchor_right = 0.194
+anchor_bottom = 0.868
+offset_left = 0.27
+offset_top = -0.0319996
+offset_right = 0.169998
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Safe"
+icon = ExtResource("10_cep4b")
+expand_icon = true
+language = "en"
+
+[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="ReportedNode/EmailClassificationPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.626
+anchor_top = 0.132
+anchor_right = 0.986
+anchor_bottom = 0.868
+offset_left = -0.0699768
+offset_top = -0.0319996
+offset_right = -0.27002
+offset_bottom = 0.0319977
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Submit Answers"
+icon = ExtResource("10_gl7c2")
+expand_icon = true
+language = "en"
 
 [node name="EmailButtonsPanel" type="NinePatchRect" parent="ReportedNode"]
 visible = false
@@ -1385,81 +1460,6 @@ script = ExtResource("14_i8cgm")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="EmailClassificationPanel" type="NinePatchRect" parent="ReportedNode"]
-visible = false
-anchors_preset = -1
-anchor_left = 0.397
-anchor_top = 0.128
-anchor_right = 1.0
-anchor_bottom = 0.228
-offset_left = -0.344025
-offset_top = 0.0559998
-offset_bottom = 11.256
-grow_horizontal = 2
-theme = ExtResource("3_amjy7")
-
-[node name="Panel" type="Panel" parent="ReportedNode/EmailClassificationPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.36
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.200012
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ArchiveButtonContainer" type="MarginContainer" parent="ReportedNode/EmailClassificationPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.014
-anchor_top = 0.132
-anchor_right = 0.194
-anchor_bottom = 0.868
-offset_left = 0.27
-offset_top = -0.0319996
-offset_right = 0.169998
-offset_bottom = 0.0319977
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "Safe"
-icon = ExtResource("10_cep4b")
-expand_icon = true
-language = "en"
-
-[node name="SubmitAnswersButtonContainer" type="MarginContainer" parent="ReportedNode/EmailClassificationPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.626
-anchor_top = 0.132
-anchor_right = 0.986
-anchor_bottom = 0.868
-offset_left = -0.0699768
-offset_top = -0.0319996
-offset_right = -0.27002
-offset_bottom = 0.0319977
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-text = "Submit Answers"
-icon = ExtResource("10_gl7c2")
-expand_icon = true
-language = "en"
 
 [node name="ReportedEmptyText" type="RichTextLabel" parent="ReportedNode"]
 visible = false
@@ -1809,7 +1809,7 @@ theme = ExtResource("11_b2fjl")
 theme_override_font_sizes/normal_font_size = 23
 theme_override_font_sizes/bold_font_size = 21
 bbcode_enabled = true
-text = "This email is a [b]scam[/b]. Even though you got this one wrong, you’re getting safer online with each guess you make."
+text = "This email is a [b]scam[/b]. Even though you got this one wrong, you’re getting safer online with each answer."
 
 [node name="LegitIncorrect" type="RichTextLabel" parent="AnswersNode"]
 visible = false
@@ -1821,7 +1821,7 @@ theme = ExtResource("11_b2fjl")
 theme_override_font_sizes/normal_font_size = 23
 theme_override_font_sizes/bold_font_size = 21
 bbcode_enabled = true
-text = "This email is [b]legitimate[/b]. Even though you got this one wrong, you’re getting safer online with each guess you make."
+text = "This email is [b]legitimate[/b]. Even though you got this one wrong, you’re getting safer online with each answer."
 
 [node name="LegitCorrect" type="RichTextLabel" parent="AnswersNode"]
 visible = false
@@ -1833,7 +1833,7 @@ theme = ExtResource("11_b2fjl")
 theme_override_font_sizes/normal_font_size = 23
 theme_override_font_sizes/bold_font_size = 21
 bbcode_enabled = true
-text = "This email is [b]legitimate[/b]. You got this one correct, and you’re getting safer online with each guess you make."
+text = "This email is [b]legitimate[/b]. You got this one correct, and you’re getting safer online with each answer."
 
 [node name="ScamCorrect" type="RichTextLabel" parent="AnswersNode"]
 visible = false
@@ -1845,7 +1845,7 @@ theme = ExtResource("11_b2fjl")
 theme_override_font_sizes/normal_font_size = 23
 theme_override_font_sizes/bold_font_size = 21
 bbcode_enabled = true
-text = "This email is a [b]scam[/b]. You got this one correct, and you’re getting safer online with each guess you make."
+text = "This email is a [b]scam[/b]. You got this one correct, and you’re getting safer online with each answer."
 
 [node name="ExplanationText" type="RichTextLabel" parent="AnswersNode"]
 visible = false
@@ -2142,10 +2142,10 @@ text = "[center]Showing non-annotated legitimate and scam emails."
 [connection signal="pressed" from="LeftButtonPanel/ExamplesButtonContainer/VBoxContainer/Button" to="." method="_on_examples_button_pressed"]
 [connection signal="pressed" from="LeftButtonPanel/ArchivedButtonContainer/VBoxContainer/Button" to="." method="_on_archived_button_pressed"]
 [connection signal="pressed" from="LeftButtonPanel/ReportedButtonContainer/VBoxContainer/Button" to="." method="_on_reported_button_pressed"]
-[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_button_pressed"]
-[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed"]
+[connection signal="pressed" from="InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_archive_or_report_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/HintButtonContainer/VBoxContainer/Button" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
 [connection signal="pressed" from="InboxNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_email_button_pressed"]
@@ -2160,20 +2160,20 @@ text = "[center]Showing non-annotated legitimate and scam emails."
 [connection signal="pressed" from="SettingsNode/Panel/CleanDisplayButtonContainer/VBoxContainer/Button" to="." method="_on_clean_display_button_pressed"]
 [connection signal="pressed" from="SettingsNode/Panel/MoreOptionsButtonContainer/VBoxContainer/Button" to="." method="_on_more_options_button_pressed"]
 [connection signal="close_requested" from="TmpPopUp/Window" to="." method="_on_window_close_requested"]
+[connection signal="pressed" from="ArchivedNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed_from_archived"]
+[connection signal="pressed" from="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
 [connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_archived_button_pressed"]
 [connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email2Container/VBoxContainer/Button" to="." method="_on_second_archived_button_pressed"]
 [connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email3Container/VBoxContainer/Button" to="." method="_on_third_archived_button_pressed"]
 [connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email4Container/VBoxContainer/Button" to="." method="_on_fourth_archived_button_pressed"]
 [connection signal="pressed" from="ArchivedNode/EmailButtonsPanel/Email5Container/VBoxContainer/Button" to="." method="_on_fifth_archived_button_pressed"]
-[connection signal="pressed" from="ArchivedNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button" to="." method="_on_report_button_pressed_from_archived"]
-[connection signal="pressed" from="ArchivedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
+[connection signal="pressed" from="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_button_pressed_from_reported"]
+[connection signal="pressed" from="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
 [connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_reported_button_pressed"]
 [connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email2Container/VBoxContainer/Button" to="." method="_on_second_reported_button_pressed"]
 [connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email3Container/VBoxContainer/Button" to="." method="_on_third_reported_button_pressed"]
 [connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email4Container/VBoxContainer/Button" to="." method="_on_fourth_reported_button_pressed"]
 [connection signal="pressed" from="ReportedNode/EmailButtonsPanel/Email5Container/VBoxContainer/Button" to="." method="_on_fifth_reported_button_pressed"]
-[connection signal="pressed" from="ReportedNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button" to="." method="_on_archive_button_pressed_from_reported"]
-[connection signal="pressed" from="ReportedNode/EmailClassificationPanel/SubmitAnswersButtonContainer/VBoxContainer/Button" to="." method="_on_submit_answers_button_pressed"]
 [connection signal="pressed" from="AnswersNode/EmailButtonsPanel/Email1Container/VBoxContainer/Button" to="." method="_on_first_answer_button_pressed"]
 [connection signal="pressed" from="AnswersNode/EmailButtonsPanel/Email2Container/VBoxContainer/Button" to="." method="_on_second_answer_button_pressed"]
 [connection signal="pressed" from="AnswersNode/EmailButtonsPanel/Email3Container/VBoxContainer/Button" to="." method="_on_third_answer_button_pressed"]
