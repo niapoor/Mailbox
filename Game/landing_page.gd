@@ -398,6 +398,7 @@ func _on_reset_button_pressed() -> void:
 	reported_button_4.hide()
 	reported_button_5.hide()
 	
+	print("reached")
 	$LeftButtonPanel/ArchivedButtonContainer/VBoxContainer/Button.show()
 	$LeftButtonPanel/ReportedButtonContainer/VBoxContainer/Button.show()
 	$InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button.show()
@@ -413,7 +414,7 @@ func _on_reset_button_pressed() -> void:
 	show_items($LeftButtonPanel)
 	_on_inbox_pressed()
 	_generate_buttons_and_emails()
-	pass # Replace with function body.
+
 
 func _show_correct_answer_message(relevant_number):
 	var index = choosing_emails.get_selected_numbers_static()[relevant_number]
@@ -959,9 +960,9 @@ func _on_archive_button_pressed() -> void:
 	if not email_button_1.is_visible():
 		$InboxNode/EmailButtonsPanel.hide()
 		$InboxNode/InboxEmptyText.show()
-		$InboxNode/EmailClassificationPanel/ArchiveButtonContainer.hide()
-		$InboxNode/EmailClassificationPanel/ReportButtonContainer.hide()
-		$InboxNode/EmailClassificationPanel/HintButtonContainer.hide()
+		$InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button.hide()
+		$InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button.hide()
+		$InboxNode/EmailClassificationPanel/HintButtonContainer/VBoxContainer/Button.hide()
 
 # When the report button is pressed.
 # ONLY FOR THE INBOX SCREEN
@@ -1064,9 +1065,9 @@ func _on_report_button_pressed() -> void:
 	if not email_button_1.is_visible():
 		$InboxNode/EmailButtonsPanel.hide()
 		$InboxNode/InboxEmptyText.show()
-		$InboxNode/EmailClassificationPanel/ArchiveButtonContainer.hide()
-		$InboxNode/EmailClassificationPanel/ReportButtonContainer.hide()
-		$InboxNode/EmailClassificationPanel/HintButtonContainer.hide()
+		$InboxNode/EmailClassificationPanel/ArchiveButtonContainer/VBoxContainer/Button.hide()
+		$InboxNode/EmailClassificationPanel/ReportButtonContainer/VBoxContainer/Button.hide()
+		$InboxNode/EmailClassificationPanel/HintButtonContainer/VBoxContainer/Button.hide()
 
 # When the report button is pressed.
 # ONLY FOR THE ARCHIVED SCREEN
